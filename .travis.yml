@@ -12,9 +12,6 @@ addons:
     - libcurl4-openssl-dev
     - libxml2-dev      
     - libfftw3-dev
-    - libgsl0-dev
-    - libgsl0ldbl
-
 env:
   global: 
     - RGL_USE_NULL=TRUE
