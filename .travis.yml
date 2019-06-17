@@ -57,8 +57,7 @@ before_install:
   - gsl-config --version ; gsl-config  --cflags; gsl-config  --libs
   - fname=gsl-2.5.tar.gz && tar -zxvf ${fname} && \
     stub=`echo $fname | sed "s/.tar.gz//"` && rm ${fname} && cd ${stub} \
-    ./configure && \
-    make && make check && make install && cd .. && rm -rf ${stub} ; 
+    ./configure && make && make check && make install && cd .. && rm -rf ${stub} ; 
   - gsl-config --version ; gsl-config  --cflags; gsl-config  --libs  
   - if [[ "${PACKAGE_NAME}" == "ROpenCVLite" || "${PACKAGE_NAME}" == "Rvision" ]]; 
     then
