@@ -54,10 +54,8 @@ before_install:
   - gsl-config --version ;
   - fname=gsl-2.5.tar.gz; tar -zxvf ${fname}; \
     stub=`echo $fname | sed "s/.tar.gz//"`; rm ${fname};	cd ${stub} \
-    mkdir ${HOME}/gsl; gsl_dir=${HOME}/gsl; ./configure --prefix=${gsl_dir}; \
-    make && make check && make install; cd .. ;  rm -rf ${stub} ; \
-    export PATH=${gsl_dir}:${PATH} ; \
-    export LD_LIBRARY_PATH=${gsl_dir}/lib:${LD_LIBRARY_PATH} ;
+    ./configure; \
+    make && make check && make install; cd .. ;  rm -rf ${stub} ; 
   - gsl-config --version ;
   - if [[ "${PACKAGE_NAME}" == "ROpenCVLite" || "${PACKAGE_NAME}" == "Rvision" ]]; 
     then
