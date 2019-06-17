@@ -50,8 +50,6 @@ before_install:
     then
       gsl_install ;
     fi
-
-  - gsl-config --version ; gsl-config  --cflags; gsl-config  --libs
   - fname=gsl-2.5.tar.gz && tar -zxvf ${fname};
   - stub=`echo ${fname} | sed "s/.tar.gz//"` ;
   - rm ${fname};
