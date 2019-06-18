@@ -55,7 +55,7 @@ before_install:
   - rm ${fname};
   - cd ${stub} ;
   - ./configure && sudo make && sudo make check && sudo make install ;
-  - cd .. && rm -rf ${stub} ; 
+  - cd .. && sudo rm -rf ${stub} ; 
   - gsl-config --version ; gsl-config  --cflags; gsl-config  --libs  
   - if [[ "${PACKAGE_NAME}" == "ROpenCVLite" || "${PACKAGE_NAME}" == "Rvision" ]]; 
     then
