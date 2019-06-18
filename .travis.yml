@@ -58,6 +58,7 @@ before_install:
   - cd .. && sudo rm -rf ${stub} ; 
   - gsl-config --version ; gsl-config  --cflags; gsl-config  --libs  ;
   - ls /usr/local/lib;
+  - ls /usr/local/include;
   - ls /usr/local ;
   - if [[ "${PACKAGE_NAME}" == "ROpenCVLite" || "${PACKAGE_NAME}" == "Rvision" ]]; 
     then
