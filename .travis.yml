@@ -54,7 +54,7 @@ before_install:
   - stub=`echo ${fname} | sed "s/.tar.gz//"` ;
   - rm ${fname};
   - cd ${stub} ;
-  - ./configure && sudo make && sudo make check && sudo make install ;
+  - ./configure --enable-shared --disable-static && sudo make && sudo make check && sudo make install ;
   - cd .. && sudo rm -rf ${stub} ; 
   - gsl-config --version ; gsl-config  --cflags; gsl-config  --libs  ;
   - ls /usr/local/lib;
